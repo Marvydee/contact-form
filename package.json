@@ -1,19 +1,22 @@
 {
-  "name": "backend",
+  "name": "brandhypez-form-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Handles form submission and sends email for Brandhypez WhatsApp class signup.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Brandhypez Team",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.0.1",
     "express": "^5.1.0",
     "multer": "^2.0.1",
     "nodemailer": "^7.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
