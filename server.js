@@ -7,7 +7,11 @@ const cors = require("cors");
 const app = express();
 const upload = multer(); // using memory storage by default
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://127.0.0.1:5500', 'http://localhost:5500', 'http://learn.brandhypez.com'],
+  methods: ['POST'],
+  credentials: false
+}));
 app.use(express.json());
 
 app.post("/submit", upload.none(), async (req, res) => {
